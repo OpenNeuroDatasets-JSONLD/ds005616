@@ -1,7 +1,14 @@
 {
     "participant_id": {
         "Description": "Unique Participant ID",
-        "LongName": "Participant ID"
+        "LongName": "Participant ID",
+        "Annotations": {
+            "IsAbout": {
+                "TermURL": "nb:ParticipantID",
+                "Label": "Participant ID"
+            },
+            "VariableType": "Identifier"
+        }
     },
     "source_id": {
         "Description": "Subject ID in the source unprocessed data",
@@ -14,7 +21,27 @@
     "age": {
         "Description": "Participant age",
         "LongName": "Participant age",
-        "Units": "years"
+        "Units": "years",
+        "Annotations": {
+            "IsAbout": {
+                "TermURL": "nb:Age",
+                "Label": "Age"
+            },
+            "VariableType": "Continuous",
+            "Format": {
+                "TermURL": "nb:FromFloat",
+                "Label": "float"
+            },
+            "MissingValues": [
+                "n/a",
+                "N/A",
+                "na",
+                "NA",
+                "nan",
+                "NaN",
+                ""
+            ]
+        }
     },
     "sex": {
         "Description": "sex of the participant as reported by the participant",
@@ -22,6 +49,26 @@
             "M": "male",
             "F": "female",
             "O": "other"
+        },
+        "Annotations": {
+            "IsAbout": {
+                "TermURL": "nb:Sex",
+                "Label": "Sex"
+            },
+            "VariableType": "Categorical",
+            "Levels": {
+                "M": {
+                    "TermURL": "snomed:248153007",
+                    "Label": "Male"
+                },
+                "F": {
+                    "TermURL": "snomed:248152002",
+                    "Label": "Female"
+                }
+            },
+            "MissingValues": [
+                "n/a"
+            ]
         }
     },
     "height (cm)": {
@@ -48,7 +95,7 @@
         "LongName": "BIDS Institution ID"
     },
     "stenosis": {
-        "Description": "All levels of stenosis identified by Sandrine Bédard",
-        "LongName":"All levels of stenosis"
+        "Description": "All levels of stenosis identified by Sandrine B\u00e9dard",
+        "LongName": "All levels of stenosis"
     }
 }
